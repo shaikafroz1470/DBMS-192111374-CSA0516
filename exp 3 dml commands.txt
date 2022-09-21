@@ -1,0 +1,49 @@
+mysql> create table employee(s.no int(10),name char(19),designation char(15),branch char(36));
+ERROR 1103 (42000): Incorrect table name 's'
+mysql>  create table employee(sno int(10),name char(19),designation char(15),branch char(36));
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> desc employee;
++-------------+----------+------+-----+---------+-------+
+| Field       | Type     | Null | Key | Default | Extra |
++-------------+----------+------+-----+---------+-------+
+| sno         | int(10)  | YES  |     | NULL    |       |
+| name        | char(19) | YES  |     | NULL    |       |
+| designation | char(15) | YES  |     | NULL    |       |
+| branch      | char(36) | YES  |     | NULL    |       |
++-------------+----------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into employee values(1,'ram','manager','chennai'),(2,'shyam','supervisor','rameshwaram'),(3,'hari','assistant','trichy');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select *from employee;
++------+-------+-------------+-------------+
+| sno  | name  | designation | branch      |
++------+-------+-------------+-------------+
+|    1 | ram   | manager     | chennai     |
+|    2 | shyam | supervisor  | rameshwaram |
+|    3 | hari  | assistant   | trichy      |
++------+-------+-------------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> select name from employee;
++-------+
+| name  |
++-------+
+| ram   |
+| shyam |
+| hari  |
++-------+
+3 rows in set (0.00 sec)
+
+mysql> select *from employee where designation=supervisor;
+ERROR 1054 (42S22): Unknown column 'supervisor' in 'where clause'
+mysql> select *from employee where designation='supervisor';
++------+-------+-------------+-------------+
+| sno  | name  | designation | branch      |
++------+-------+-------------+-------------+
+|    2 | shyam | supervisor  | rameshwaram |
++------+-------+-------------+-------------+
+1 row in set (0.00 sec)
