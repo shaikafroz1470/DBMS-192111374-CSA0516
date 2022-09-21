@@ -1,0 +1,83 @@
+mysql> select * from marks;
++-------+---------------------+-----------+-------+-------+
+| sl_no | Name_of_the_student | subject   | Marks | Grade |
++-------+---------------------+-----------+-------+-------+
+|     1 | Raghu               | dbms      |    99 | A     |
+|     1 | Ram                 | physics   |    89 | A     |
+|     2 | Ruchi               | maths     |    77 | B     |
+|     3 | Varu                | chemistry |    88 | B     |
++-------+---------------------+-----------+-------+-------+
+4 rows in set (0.02 sec)
+
+mysql> select *from marks
+    -> where subject IN('dbms','maths');
++-------+---------------------+---------+-------+-------+
+| sl_no | Name_of_the_student | subject | Marks | Grade |
++-------+---------------------+---------+-------+-------+
+|     1 | Raghu               | dbms    |    99 | A     |
+|     2 | Ruchi               | maths   |    77 | B     |
++-------+---------------------+---------+-------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select*from marks
+    -> where subject BETWEEN 'chemistry' AND 'maths';
++-------+---------------------+-----------+-------+-------+
+| sl_no | Name_of_the_student | subject   | Marks | Grade |
++-------+---------------------+-----------+-------+-------+
+|     1 | Raghu               | dbms      |    99 | A     |
+|     2 | Ruchi               | maths     |    77 | B     |
+|     3 | Varu                | chemistry |    88 | B     |
++-------+---------------------+-----------+-------+-------+
+3 rows in set (0.02 sec)
+
+
+mysql> select*from marks
+    -> where subject NOT BETWEEN 'chemistry' AND 'maths';
++-------+---------------------+---------+-------+-------+
+| sl_no | Name_of_the_student | subject | Marks | Grade |
++-------+---------------------+---------+-------+-------+
+|     1 | Ram                 | physics |    89 | A     |
++-------+---------------------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> select count(subject) from marks;
++----------------+
+| count(subject) |
++----------------+
+|              4 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(marks)as total_sum from marks;
++-----------+
+| total_sum |
++-----------+
+|       353 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> select max(marks) from students;
+ERROR 1146 (42S02): Table 'ram.students' doesn't exist
+mysql> select max(marks)from marks;
++------------+
+| max(marks) |
++------------+
+|         99 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select min(marks)from marks;
++------------+
+| min(marks) |
++------------+
+|         77 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(marks) from marks;
++------------+
+| avg(marks) |
++------------+
+|    88.2500 |
++------------+
+1 row in set (0.00 sec)
