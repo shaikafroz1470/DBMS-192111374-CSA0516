@@ -15,3 +15,5 @@ case scenario-(BOOK PUBLISHING COMPANY)-(https://github.com/shaikafroz1470/DBMS-
 DDL COMMANDS-(CREATE,ALTER,DROP)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/EXP1.txt)
 ## EXPERIMENT 19
 DATABASE CONNECTIVITY-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/database%20connectivity.txt)
+## EXPERIMENT 23
+CASE SCENARIO-(GENERAL HOSPITAL)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2023.txt)
