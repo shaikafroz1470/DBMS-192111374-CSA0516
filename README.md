@@ -12,4 +12,4 @@ SELECT various clause-(GROUP BY,HAVING,ORDERBY)-(https://github.com/shaikafroz14
 ## EXPERIMENT 22
 case scenario-(BOOK PUBLISHING COMPANY)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2022.txt)
 ## EXPERIMENT 01
-DDL COMMANDS-(CREATE,ALTER,DROP)-()
+DDL COMMANDS-(CREATE,ALTER,DROP)-()D
