@@ -20,4 +20,5 @@ CASE SCENARIO-(GENERAL HOSPITAL)-(https://github.com/shaikafroz1470/DBMS-1921113
 ## EXPERIMENT 9
 JOINS-(EQUI,INNER,OUTER)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp9.txt)
 ## EXPERIMENT 8
-SUBQUERY AND CORELATED QUERY-()
+SUBQUERY AND CORELATED QUERY-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp8.txt)
+
