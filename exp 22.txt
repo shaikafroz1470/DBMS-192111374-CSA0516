@@ -1,0 +1,154 @@
+mysql> create table bookpublisher(bookid int(45),bookname char(45),author char(45),customer char(45));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc bookpublisher;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| bookid   | int(45)  | YES  |     | NULL    |       |
+| bookname | char(45) | YES  |     | NULL    |       |
+| author   | char(45) | YES  |     | NULL    |       |
+| customer | char(45) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> create customers(cust_name char(45),bookprice int(45),mobileno int(45),address char(45));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customers(cust_name char(45),bookprice int(45),mobileno int(45),address char(45)' at line 1
+mysql> create table customers(cust_name char(45),bookprice int(45),mobileno int(45),address char(45));
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> desc customers;
++-----------+----------+------+-----+---------+-------+
+| Field     | Type     | Null | Key | Default | Extra |
++-----------+----------+------+-----+---------+-------+
+| cust_name | char(45) | YES  |     | NULL    |       |
+| bookprice | int(45)  | YES  |     | NULL    |       |
+| mobileno  | int(45)  | YES  |     | NULL    |       |
+| address   | char(45) | YES  |     | NULL    |       |
++-----------+----------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into bookpublisher values(223,'dbms','siddu','bhargav'),(456,'datastructures','mahesh','pushpa'),(67,'python','sasi','vinay'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql>  insert into bookpublisher values(223,'dbms','siddu','bhargav'),(456,'datastructures','mahesh','pushpa'),(67,'python','sasi','vinay');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * bookpublisher;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bookpublisher' at line 1
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+
+| bookid | bookname       | author | customer |
++--------+----------------+--------+----------+
+|    223 | dbms           | siddu  | bhargav  |
+|    456 | datastructures | mahesh | pushpa   |
+|     67 | python         | sasi   | vinay    |
++--------+----------------+--------+----------+
+3 rows in set (0.00 sec)
+
+mysql> insert into customers values('priya',145,123456,'chennai'),('devi',890,987654321,'gujarat'),('saniya',459,98674523,'chennai');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from customers;
++-----------+-----------+-----------+---------+
+| cust_name | bookprice | mobileno  | address |
++-----------+-----------+-----------+---------+
+| priya     |       145 |    123456 | chennai |
+| devi      |       890 | 987654321 | gujarat |
+| saniya    |       459 |  98674523 | chennai |
++-----------+-----------+-----------+---------+
+3 rows in set (0.00 sec)
+
+mysql> alter table bookpublisher add(bookcost int(45));
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    223 | dbms           | siddu  | bhargav  |     NULL |
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> update bookpublisher set where bookcost=499 where bookname='dbms';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where bookcost=499 where bookname='dbms'' at line 1
+mysql> update bookpublisher set  bookcost=499 where bookname='dbms';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    223 | dbms           | siddu  | bhargav  |      499 |
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> select * from customers ORDERBY address;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'address' at line 1
+mysql> select * from customers ORDER BY address;
++-----------+-----------+-----------+---------+
+| cust_name | bookprice | mobileno  | address |
++-----------+-----------+-----------+---------+
+| priya     |       145 |    123456 | chennai |
+| saniya    |       459 |  98674523 | chennai |
+| devi      |       890 | 987654321 | gujarat |
++-----------+-----------+-----------+---------+
+3 rows in set (0.00 sec)
+
+mysql> select * from customers HAVING bookprice<500;
++-----------+-----------+----------+---------+
+| cust_name | bookprice | mobileno | address |
++-----------+-----------+----------+---------+
+| priya     |       145 |   123456 | chennai |
+| saniya    |       459 | 98674523 | chennai |
++-----------+-----------+----------+---------+
+2 rows in set (0.00 sec)
+
+mysql> delete from bookpublisher where custmers;
+ERROR 1054 (42S22): Unknown column 'custmers' in 'where clause'
+mysql> delete from bookpublisher where customers;
+ERROR 1054 (42S22): Unknown column 'customers' in 'where clause'
+mysql> delete from bookpublisher where 'custmers';
+Query OK, 0 rows affected, 2 warnings (0.00 sec)
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    223 | dbms           | siddu  | bhargav  |      499 |
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql>  delete from bookpublisher where 'bookcost';
+Query OK, 0 rows affected, 2 warnings (0.00 sec)
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    223 | dbms           | siddu  | bhargav  |      499 |
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> delete from bookpublisher where bookcost;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+2 rows in set (0.00 sec)
