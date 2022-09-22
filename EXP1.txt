@@ -1,0 +1,71 @@
+mysql> create table bookpublisher(bookid int(45),bookname char(45),author char(45),customer char(45));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc bookpublisher;
++----------+----------+------+-----+---------+-------+
+| Field    | Type     | Null | Key | Default | Extra |
++----------+----------+------+-----+---------+-------+
+| bookid   | int(45)  | YES  |     | NULL    |       |
+| bookname | char(45) | YES  |     | NULL    |       |
+| author   | char(45) | YES  |     | NULL    |       |
+| customer | char(45) | YES  |     | NULL    |       |
++----------+----------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql>  insert into bookpublisher values(223,'dbms','siddu','bhargav'),(456,'datastructures','mahesh','pushpa'),(67,'python','sasi','vinay');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * bookpublisher;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bookpublisher' at line 1
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+
+| bookid | bookname       | author | customer |
++--------+----------------+--------+----------+
+|    223 | dbms           | siddu  | bhargav  |
+|    456 | datastructures | mahesh | pushpa   |
+|     67 | python         | sasi   | vinay    |
++--------+----------------+--------+----------+
+3 rows in set (0.00 sec)
+
+mysql> alter table bookpublisher add(bookcost int(45));
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    223 | dbms           | siddu  | bhargav  |     NULL |
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> update bookpublisher set where bookcost=499 where bookname='dbms';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where bookcost=499 where bookname='dbms'' at line 1
+mysql> update bookpublisher set  bookcost=499 where bookname='dbms';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    223 | dbms           | siddu  | bhargav  |      499 |
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+3 rows in set (0.00 sec)
+
+mysql> delete from bookpublisher where bookcost;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from bookpublisher;
++--------+----------------+--------+----------+----------+
+| bookid | bookname       | author | customer | bookcost |
++--------+----------------+--------+----------+----------+
+|    456 | datastructures | mahesh | pushpa   |     NULL |
+|     67 | python         | sasi   | vinay    |     NULL |
++--------+----------------+--------+----------+----------+
+2 rows in set (0.00 sec)
