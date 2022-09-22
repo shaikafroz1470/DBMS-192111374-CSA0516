@@ -1,83 +1,58 @@
-mysql> select * from marks;
-+-------+---------------------+-----------+-------+-------+
-| sl_no | Name_of_the_student | subject   | Marks | Grade |
-+-------+---------------------+-----------+-------+-------+
-|     1 | Raghu               | dbms      |    99 | A     |
-|     1 | Ram                 | physics   |    89 | A     |
-|     2 | Ruchi               | maths     |    77 | B     |
-|     3 | Varu                | chemistry |    88 | B     |
-+-------+---------------------+-----------+-------+-------+
-4 rows in set (0.02 sec)
-
-mysql> select *from marks
-    -> where subject IN('dbms','maths');
-+-------+---------------------+---------+-------+-------+
-| sl_no | Name_of_the_student | subject | Marks | Grade |
-+-------+---------------------+---------+-------+-------+
-|     1 | Raghu               | dbms    |    99 | A     |
-|     2 | Ruchi               | maths   |    77 | B     |
-+-------+---------------------+---------+-------+-------+
+mysql>  select * from family where name IN ('afroz','omkar');
++-------+------+-------------+------------+---------+
+| name  | age  | votercardno | occupation | income  |
++-------+------+-------------+------------+---------+
+| omkar |   35 |      765843 | supervisor |    NULL |
+| afroz |   20 |    45623678 | proffessor | 4500000 |
++-------+------+-------------+------------+---------+
 2 rows in set (0.00 sec)
 
-mysql> select*from marks
-    -> where subject BETWEEN 'chemistry' AND 'maths';
-+-------+---------------------+-----------+-------+-------+
-| sl_no | Name_of_the_student | subject   | Marks | Grade |
-+-------+---------------------+-----------+-------+-------+
-|     1 | Raghu               | dbms      |    99 | A     |
-|     2 | Ruchi               | maths     |    77 | B     |
-|     3 | Varu                | chemistry |    88 | B     |
-+-------+---------------------+-----------+-------+-------+
-3 rows in set (0.02 sec)
+mysql>  select * from family where name BETWEEN 'bhargav' and 'afroz';
+Empty set (0.00 sec)
 
+mysql> select * from family where name BETWEEN 'bhargav' AND 'afroz';
+Empty set (0.00 sec)
 
-mysql> select*from marks
-    -> where subject NOT BETWEEN 'chemistry' AND 'maths';
-+-------+---------------------+---------+-------+-------+
-| sl_no | Name_of_the_student | subject | Marks | Grade |
-+-------+---------------------+---------+-------+-------+
-|     1 | Ram                 | physics |    89 | A     |
-+-------+---------------------+---------+-------+-------+
+mysql> select * from family where name BETWEEN 'omkar' AND 'afroz';
+Empty set (0.00 sec)
+
+mysql> select * from family where name BETWEEN 'bhargav' AND 'afroz';
+Empty set (0.00 sec)
+
+mysql> select * from family
+    -> where name BETWEEN 'bhargav' AND 'afroz';
+Empty set (0.00 sec)
+
+mysql> select count (age) from family;
+ERROR 1630 (42000): FUNCTION afroz.count does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+mysql>  select count(age) from family;
++------------+
+| count(age) |
++------------+
+|          4 |
++------------+
+1 row in set (0.02 sec)
+
+mysql> select max(age) from family;
++----------+
+| max(age) |
++----------+
+|       45 |
++----------+
 1 row in set (0.00 sec)
 
-mysql> select count(subject) from marks;
-+----------------+
-| count(subject) |
-+----------------+
-|              4 |
-+----------------+
+mysql> select min(age) from family;
++----------+
+| min(age) |
++----------+
+|       19 |
++----------+
 1 row in set (0.00 sec)
 
-mysql> select sum(marks)as total_sum from marks;
-+-----------+
-| total_sum |
-+-----------+
-|       353 |
-+-----------+
-1 row in set (0.00 sec)
-
-mysql> select max(marks) from students;
-ERROR 1146 (42S02): Table 'ram.students' doesn't exist
-mysql> select max(marks)from marks;
-+------------+
-| max(marks) |
-+------------+
-|         99 |
-+------------+
-1 row in set (0.00 sec)
-
-mysql> select min(marks)from marks;
-+------------+
-| min(marks) |
-+------------+
-|         77 |
-+------------+
-1 row in set (0.00 sec)
-
-mysql> select avg(marks) from marks;
-+------------+
-| avg(marks) |
-+------------+
-|    88.2500 |
-+------------+
-1 row in set (0.00 sec)
+mysql> select avg(age) from family;
++----------+
+| avg(age) |
++----------+
+|  29.7500 |
++----------+
+1 row in set (0.01 sec)
