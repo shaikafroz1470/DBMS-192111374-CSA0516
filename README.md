@@ -9,3 +9,5 @@ SELECT various clause-(WHERE,PATTERNMATCHING)-(https://github.com/shaikafroz1470
 SELECT various clause-(IN,BETWEEN,AGGREGATE)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp6.txt)
 ## EXPERIMENT 7
 SELECT various clause-(GROUP BY,HAVING,ORDERBY)-()
+## EXPERIMENT 22
+case scenario-(BOOK PUBLISHING COMPANY)-()
