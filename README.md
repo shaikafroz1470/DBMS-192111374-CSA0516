@@ -6,4 +6,4 @@ DML COMMANDS -(Update,Delete)-(https://github.com/shaikafroz1470/DBMS-192111374-
 ## EXPERIMENT 5
 SELECT various clause-(WHERE,PATTERNMATCHING)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%205.txt)
 ## EXPERIMENT 6
-SELECT various clause-(IN,BETWEEN,AGGREGATE)-()
+SELECT various clause-(IN,BETWEEN,AGGREGATE)-()d
