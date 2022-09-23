@@ -11,6 +11,8 @@ SELECT various clause-(WHERE,PATTERNMATCHING)-(https://github.com/shaikafroz1470
 SELECT various clause-(IN,BETWEEN,AGGREGATE)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp6.txt)
 ## EXPERIMENT 7
 SELECT various clause-(GROUP BY,HAVING,ORDERBY)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp7.txt)
+## EXPERIMENT 8
+SUBQUERY AND CORELATED QUERY-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp8.txt)
 ## EXPERIMENT 22
 case scenario-(BOOK PUBLISHING COMPANY)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2022.txt)
 ## EXPERIMENT 20
@@ -19,8 +21,6 @@ DATABASE CONNECTIVITY-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/
 CASE SCENARIO-(GENERAL HOSPITAL)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2023.txt)
 ## EXPERIMENT 9
 JOINS-(EQUI,INNER,OUTER)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp9.txt)
-## EXPERIMENT 8
-SUBQUERY AND CORELATED QUERY-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp8.txt)
 ## EXPERIMENT 13
 TCL COMMANDS -(COMMIT,ROLLBACK,SAVEPOINT)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp13.txt)
 ## EXPERIMENT 10
