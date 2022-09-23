@@ -21,6 +21,8 @@ JOINS-(EQUI,INNER,OUTER)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA05
 VIEW,INDEX,SEQUENCE-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp10.txt)
 ## EXPERIMENT 13
 TCL COMMANDS -(COMMIT,ROLLBACK,SAVEPOINT)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp13.txt)
+## EXPERIMENT 14
+DCL COMMANDS-(GRANT ,REVOKE)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2014)
 ## EXPERIMENT 19
 database connectivity 1-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2019.txt)
 ## EXPERIMENT 20
