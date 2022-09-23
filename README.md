@@ -19,6 +19,8 @@ SUBQUERY AND CORELATED QUERY-(https://github.com/shaikafroz1470/DBMS-192111374-C
 JOINS-(EQUI,INNER,OUTER)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp9.txt)
 ## EXPERIMENT 10
 VIEW,INDEX,SEQUENCE-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp10.txt)
+## EXPERIMENT 12
+REPEAT AND WHILE -(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2012)
 ## EXPERIMENT 13
 TCL COMMANDS -(COMMIT,ROLLBACK,SAVEPOINT)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp13.txt)
 ## EXPERIMENT 14
