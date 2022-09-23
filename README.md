@@ -25,6 +25,8 @@ TCL COMMANDS -(COMMIT,ROLLBACK,SAVEPOINT)-(https://github.com/shaikafroz1470/DBM
 database connectivity 1-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2019.txt)
 ## EXPERIMENT 20
 DATABASE CONNECTIVITY-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/database%20connectivity.txt)
+## EXPERIMENT 21
+database connectivity2-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/EXP%2021.txt)
 ## EXPERIMENT 22
 case scenario-(BOOK PUBLISHING COMPANY)-(https://github.com/shaikafroz1470/DBMS-192111374-CSA0516/blob/main/exp%2022.txt)
 ## EXPERIMENT 23
