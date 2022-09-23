@@ -1,0 +1,31 @@
+mysql> alter table cricket add primary key (umpire);
+Query OK, 1 row affected (0.02 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> desc cricket;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| score      | int(11)  | YES  |     | NULL    |       |
+| bowler     | char(10) | YES  |     | NULL    |       |
+| umpire     | char(10) | NO   | PRI |         |       |
+| batsman    | char(10) | YES  |     | NULL    |       |
+| gender     | char(5)  | YES  |     | NULL    |       |
++------------+----------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+
+mysql> alter table library add unique key (gender);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc cricket;
++------------+----------+------+-----+---------+-------+
+| Field      | Type     | Null | Key | Default | Extra |
++------------+----------+------+-----+---------+-------+
+| score      | int(11)  | YES  |     | NULL    |       |
+| bowler     | char(10) | YES  |     | NULL    |       |
+| umpire     | char(10) | NO   | PRI |         |       |
+| batsman    | char(10) | YES  |     | NULL    |       |
+| gender     | char(5)  | YES  | UNI | NULL    |       |
++------------+----------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
